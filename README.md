@@ -3,3 +3,5 @@ Python Projects ReadMe
 Welcome to my Python Projects repository. It includes three programs that showcase core Python and object-oriented programming concepts, including classes and objects, constructors, and inheritance.
 
 It also includes a simple tic-tac-toe game that reinforces fundamentals such as functions, indexing, exceptions handling, and list comprehension.
+
+Also, commit history is not available in thie project. I put the project together and uploaded it all at once. My other projects for SQL and GoLang have some commit history.
