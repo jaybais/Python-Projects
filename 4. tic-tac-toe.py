@@ -8,33 +8,47 @@ Winning Combinations:
 [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]]
 '''
 
+print('\n')
+print("Welcome to Tic-Tac-Toe! The computer will go first with 'X' and you will play with 'O'. Please enter a number between 1 to 9 to make your move, corresponding to the positions on the tic-tac-toe board as follows:")
+print('\n')
 
-EMPTY = " "
-board = []
-moves = [5]
-moves_by_human = []
-moves_by_computer = [5]
-X = 'X'
-O = 'O'  
+print(" 1 | 2 | 3 ")
+print("-----------")
+print(" 4 | 5 | 6 ")
+print("-----------")
+print(" 7 | 8 | 9 ")
 
 print('\n')
-def display_board(board):
+
+EMPTY = " "                 
+board = []                  
+moves = [5]                 
+moves_by_human = []         
+moves_by_computer = [5]     
+X = 'X'                         
+O = 'O'                         
+
+print('\n')
+
+def display_board(board):      
     print('Board: ', board)
 
-for i in range(3):
+for i in range(3):             
     row = [EMPTY for i in range(3)]
     board.append(row)
 display_board(board)
 
 print('\n')
+
 print("Computer's first move is: 5")
 board[1][1] = X
 display_board(board)
+
 print('\n')
 
 
 # To determine the winner
-import sys 
+import sys                       
 def victory_for(board, sign):
     winning_combinations = [
         [1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], 
@@ -42,13 +56,13 @@ def victory_for(board, sign):
         ]
     
     for i in winning_combinations:
-        common_elements = list(set(board).intersection(set(i)))
-        if i == sorted(common_elements):
+        common_elements = list(set(board).intersection(set(i))) 
+        if i == sorted(common_elements):  
             print('\n')
             print(sign, 'WINS!!!',i)
             print('\n')
             sys.exit(0)
-            #quit()
+            
     else:
         print('No win.')
         print('\n')
@@ -61,7 +75,7 @@ def enter_move(board):
         if m < 1 or m > 9:
             print("You lose a turn. Please enter an integer between 1 to 9 only. ")
             print('\n')
-            # enter_move(board)
+            
             return
     except ValueError:
         print("Last try...Please enter an integer between 1 to 9 only. ")
@@ -111,7 +125,7 @@ enter_move(board)
 
 
 # Moves by computer 
-from random import randrange
+from random import randrange          
 for i in range(10):
     num = randrange(1, 9)
     print("Computer's move is: ",num)
@@ -125,8 +139,8 @@ for i in range(10):
         print('Already taken...')       
         continue
     
-    if num == 1:
-        board[0][0] = X     
+    if num == 1:                     
+        board[0][0] = X              
     if num == 2:
         board[0][1] = X    
     if num == 3:
@@ -145,7 +159,7 @@ for i in range(10):
         board[2][2] = X
 
     print('Board update: ',board)
-    victory_for(moves_by_computer, 'COMPUTER')
+    victory_for(moves_by_computer, 'COMPUTER')  
     enter_move(board)
 
 else:
