@@ -11,6 +11,7 @@ At this time, I have completed three of my four goals:
 * ✅ Signing up for and using an API key
 * ✅ Making HTTP requests with requests
 * ✅ Reading and parsing JSON responses
-* ⬜ Handling API error
+* ✅ Handling API error
 
-I am currenlty working on handling API error(s)
+I am currently working on finishing touches so that the user can enter a city 
+from the terminal.
