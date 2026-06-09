@@ -49,6 +49,6 @@ def get_weather(city, state, country="US"): # function to get weather data for a
         print(f"Unexpected network error: {e}")
 
 
-get_weather("West Chester", "PA", "US")
+#get_weather("West Chester", "PA", "US")
 #get_weather("FakeCity", "FakeState", "US")  # Test with an invalid city to trigger error handling
 
